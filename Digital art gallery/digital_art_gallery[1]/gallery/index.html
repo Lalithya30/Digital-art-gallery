@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Art Gallery</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Digital Art Gallery</h1>
+        <button onclick="toggleForm()">Upload Artwork</button>
+    </header>
+
+    <main id="gallery"></main>
+
+    <section id="uploadForm" class="hidden">
+        <h2>Upload Artwork</h2>
+        <form onsubmit="handleUpload(event)">
+            <input type="text" id="title" placeholder="Title" required>
+            <input type="text" id="artist" placeholder="Artist Name" required>
+            <textarea id="description" placeholder="Description" required></textarea>
+            <input type="file" id="image" accept="image/*" required>
+            <button type="submit">Upload</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
